@@ -10,16 +10,27 @@ console.log(new Date)
 const displayDate = () => {
   const currentDate = new Date()
 
-  document.getElementById("display-element").innerHTML = currentDate;
+  document.getElementById("ShowDate").innerHTML = currentDate;
 }
  
 
 // Write a JavaScript program to convert a number to a string.
-
-
+const num2String = () => {
+let num = document.getElementById("firstNum").value
+  let convertedNum = num.toString();
+  document.getElementById("ConvertedNum").innerHTML = convertedNum 
+  return convertedNum;
+}
+// const results = num2String("5");
+// console.log(typeof results)
 
 // Write a JavaScript program to convert a string to the number.
-
+const stringNum = () => {
+  let str = document.getElementById("string").value
+  // let converted = parseInt(str);
+  document.getElementById("displayNum").innerHTML = parseInt(str)
+  return str
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
@@ -29,15 +40,63 @@ const displayDate = () => {
   // * Number
   // * NaN
   // * String
+ 
   
+const checkDataType = (something) => {
+  let data = document.getElementById("dataType").value
+  document.getElementById("display-element2").innerHTML = typeof data;
+  return typeof something;
+}
+// // boolean
+// console.log(checkDataType(true))
+// // null
+// let blackhole = null;
+// console.log(checkDataType(blackhole))
+
+// // undefined
+// let apple;
+// console.log(checkDataType(apple))
+
+// // Number
+// let age = 28;
+// console.log(checkDataType(age))
+
+// // NaN
+// let x = NaN;
+// console.log(checkDataType(x))
+
+// // String
+// let string1 = "A String"
+// console.log(checkDataType(string1))
+
+
 
   
 // Write a JavaScript program that adds 2 numbers together.
-
-
+const addNum = () =>{
+  let num1 = document.getElementById("num1").value
+  let num2 = document.getElementById("num2").value
+  console.log(num1, num2)
+  let total = Number(num1) + Number(num2);
+  console.log(total)
+  document.getElementById("display-number").innerHTML = total
+  return total
+}
+// const res = sum(4, 5);
+// console.log(res)
 
 // Write a JavaScript program that runs only when 2 things are true.
-
+const checkAgeAndHeight = () => {
+  let age = document.getElementById("age").value
+  let height = document.getElementById("height").value
+  if(age == 10 && height == 108)
+  return document.getElementById("display-element3").innerHTML =  'you may ride the rollercoaster'
+  if(age != 10 && height != 108)
+  return document.getElementById("display-element3").innerHTML = 'both are not correct'
+  if(age == 10 || height == 108)
+  return document.getElementById("display-element3").innerHTML = 'only one is correct'
+  // return 'you may ride the rollercoaster'
+}
 
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
